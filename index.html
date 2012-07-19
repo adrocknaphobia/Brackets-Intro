@@ -1,0 +1,185 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    
+    <title>Introducing Brackets</title>
+    <meta name="description" content="Introducing Brackets: An Open Source Code Editor For The Web" />
+    <meta name="author" content="Adam Lehman : Adobe Sr. Product Manager" />
+    
+    <!-- STYLES -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    
+</head>
+    
+<body>
+
+<div class="reveal">
+
+    <!-- Used to fade in a background when a specific slide state is reached -->
+    <div class="state-background"></div>
+    
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+    <section>
+        <h1>Brackets</h1>
+        <div><a class="image" href="http://brackets.io"><img id="logo" src="assets/brackets_512.png" width="350"  /></a></div>
+        <strong><a href="http://brackets.io">http://brackets.io</a></strong>
+    </section>
+    
+    <section data-state="plus">
+        <h2>Brackets is an open source<br/>code editor for the web.</h2>
+        <img id="screen-slice" src="assets/brackets-screen.png" width="600" class="shadow" />
+        <div class="center"><a href="http://github.com/adobe/brackets">http://github.com/adobe/brackets</a></div>
+    </section>
+                
+    <section>
+        <h1>What makes Brackets <strong>special</strong>?</h1>    
+    </section>
+    
+    <section>
+        <h1><strong>Optimized</strong> for web development.</h1>
+        <br />
+        <h2>Brackets cares about JS, HTML &amp; CSS</h2>
+    </section>
+                
+    <section>
+        <h1>A <strong>new</strong> approach<br/>to coding.</h1>
+        <br />
+        <h2>Tools shouldn't get in your way</h2>
+    </section>
+                
+    <section>
+        <h1>Brackets <img src="assets/8bitheart.png" style="margin: 0 10px 0 0;" class="heart" />'s your browser.</h1>
+        <br />
+        <h2>Design and develop <strong>live</strong> in the browser</h2>
+    </section>
+                
+    <section>
+        <h1>Built with<br/> JS, HTML &amp; CSS</h1>
+        <img src="assets/brackets-github.png" />
+        <h2>MIT-licensed and hosted on GitHub!</h2>
+    </section>
+
+    <section>
+        <h1>Future</h1>
+        <br />
+        <h2>
+            <strong>Cloud</strong> &middot;
+            <strong>Embedded</strong> &middot;
+            <strong>Device</strong> &middot;
+            <strong>???</strong>
+        </h2>
+    </section>
+
+    <section>
+        <h1>Help Wanted</h1>
+        <h3>Get Involved!</h3>
+        <br />
+        <ul>
+            <li><strong>Project:</strong> <a href="http://github.com/adobe/brackets">http://github.com/adobe/brackets</a></li>
+            <li><strong>Wiki:</strong> <a href="http://github.com/adobe/brackets/wiki">http://github.com/adobe/brackets/wiki</a></li>
+            <li><strong>Backlog:</strong> <a href="http://bit.ly/BracketsBacklog">http://bit.ly/BracketsBacklog</a></li>
+            <li><strong>Group:</strong> <a href="http://groups.google.com/group/brackets-dev">http://groups.google.com/group/brackets-dev</a></li>
+            <li><strong>IRC:</strong> <a href="http://webchat.freenode.net/?channels=brackets">#brackets on Freenode</a></li>
+            <li><strong>Twitter:</strong> <a href="http://twitter.com/#!/brackets">@Brackets</a></li>
+        </ul>
+    </section>
+        
+    <section>
+        <h1>Thanks!</h1>
+        <img src="assets/thumbs-up-chuck.gif" />
+        <h3>Email: <a href="mailto:adrock@adobe.com">adrock@adobe.com</a></h3>
+        <h3>Twitter: <a href="http://www.twitter.com/adrocknaphobia">@Adrocknaphobia</a></h3>
+        <h3>G+: <a href="http://gplus.to/adrock">http://gplus.to/adrock</a></h3>
+        
+        
+    </section>
+        
+    </div>
+                
+    <!-- The navigational controls UI -->
+    <aside class="controls">
+        <a class="left" href="#">&#x25C4;</a>
+        <a class="right" href="#">&#x25BA;</a>
+        <a class="up" href="#">&#x25B2;</a>
+        <a class="down" href="#">&#x25BC;</a>
+    </aside>
+    
+    <!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
+    <div class="progress"><span></span></div>
+    
+</div>
+    
+<!-- Optional libraries for code syntax highlighting and classList support in IE9 -->
+		<script src="lib/js/head.min.js"></script>
+
+		<script>
+			// Load the main reveal.js script
+			head.js( 'js/reveal.js', function() {
+				// Parse the query string into a key/value object
+				var query = {};
+
+				location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
+					query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+				} );
+
+				// Fires when a slide with data-state=customevent is activated
+				Reveal.addEventListener( 'customevent', function() {
+					alert( '"customevent" has fired' );
+				} );
+
+				// Fires each time a new slide is activated
+				Reveal.addEventListener( 'slidechanged', function( event ) {
+					// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+				} );
+
+				Reveal.initialize({
+					// Display controls in the bottom right corner
+					controls: true,
+
+					// Display a presentation progress bar
+					progress: true,
+
+					// If true; each slide will be pushed to the browser history
+					history: true,
+
+					// Loops the presentation, defaults to false
+					loop: false,
+
+					// Flags if mouse wheel navigation should be enabled
+					mouseWheel: true,
+
+					// Apply a 3D roll to links on hover
+					rollingLinks: true,
+
+					// UI style
+					theme: query.theme || 'default', // default/neon
+
+					// Transition style
+					transition: query.transition || 'default' // default/cube/page/concave/linear(2d)
+				});
+			} );
+			
+			// Load third party scripts
+			head.js( 'lib/js/classList.js' );
+			head.js( 'lib/js/highlight.js', function() {
+				// Fire off syntax highlighting for potential code samples in the slides
+				hljs.initHighlightingOnLoad();
+			} );
+
+			// If we're runnning the notes server we need to include some additional JS
+			// TODO Is there a better way to determine if we're running the notes server?
+			if( window.location.host === 'localhost:1947' ) {
+				head.js( 'socket.io/socket.io.js', 'plugin/speakernotes/client.js' );
+			}
+		</script>
+    
+</body></html>
